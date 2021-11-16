@@ -1,0 +1,257 @@
+/* CSS that is common between mobile and desktop
+ mobile specific CSS specified for my own clarity*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: calc(12px + 0.25vw);
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #232136; /*rose pine moon base*/
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+
+nav {
+  display: flex;
+  background-color: #9ccfd8; /*rose pine moon foam*/
+  top: 0;
+  /*mobile css below: */
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*mobile css*/
+nav * {
+  flex-grow: 1;
+}
+
+nav > h1,h2 {
+  display: flex;
+  justify-content: center;
+  /*mobile css below: */
+  text-align: center;
+  align-items: center;
+  width: 30vw;
+  height: 100%;
+}
+
+.nav-home {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  margin-bottom: 1em;
+}
+
+body {
+  display: flex;
+  background-color: rgba(224,222,245,0.6)	; /*rose pine moon text #e0def4*/
+  /*mobile css below: */
+  flex-direction: column;
+}
+
+div {
+  margin-bottom: 1em;
+}
+
+div.main {
+  display: flex;
+  /*mobile css below: */
+  margin-top: 10vh;
+  padding-top: 2.5vh;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+div.contact {
+  display: flex;
+  background-color:	#c4a7e7; /*rose pine moon iris*/
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  /*mobile css below: */
+  width: 70vw;
+  height: 25vh;
+  margin: 2.5vh 10vw;
+}
+
+div.contact p {
+  display: flex;
+  position: relative;
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+div.contactedit, div.contactinfo {
+  width: 25vw;
+  margin: 0 1vw;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  max-width: 300px;
+  height: 100%;
+  margin-top: 2.5vh;
+}
+
+div.contactinfo {
+  row-gap: 5vh;
+}
+
+div.contactimg, div.contactname {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.contactname {
+  justify-content: space-between;
+  font-size: 1.25rem;
+}
+
+img {
+  object-fit: contain;
+  margin-bottom: 1em;
+}
+
+img.profilepic {
+  border-radius: 50%;
+  border: 2px solid #393552; /*rose pine moon overlay*/
+  opacity: 0.9;
+  width: 30%;
+  min-width: 80px;
+  height: auto;
+}
+
+div.form, form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+form {
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+input {
+  padding: 1vh;
+  width: 100%;
+  background-color: rgba(196,166,232,0.75); /*rose pine moon iris*/ 
+  border-color: #59546d; /*rose pine moon inactive*/ 
+}
+
+::placeholder {
+  color: #393552; /*rose pine moon overlay*/
+}
+
+div.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+button.button {
+  padding: 1vh;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 1.25vw;
+}
+
+button.save, button.edit {
+  background-color: rgba(61,143,176,0.8) /*rose pine moon pine #3e8fb0*/
+}
+
+button.cancel {
+  background-color: rgba(235,112,145,0.8); /*rose pine moon love #eb6f92*/
+}
+
+button.close {
+  background-color: rgba(130,125,156,0.8); /*rose pine moon subtle #817c9c*/
+}
+
+div.inputcontainer {
+  display: flex;
+}
+
+button.extrafield {
+  border: none;
+  background-color: transparent;
+  font-size: 2.3rem;
+  margin-left: 0.5vw;
+}
+
+#extranamefield {
+  color: transparent;
+}
+
+/* CSS for desktop, assumed mobile device width <480px
+ notes on desktop vs mobile css left for myself*/
+
+@media all and (min-width:480px) {
+  body {
+    flex-direction: row; /*overwrite mobile*/
+    height: 100%;
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 20vw;
+    min-height: 100vh;
+    position: sticky;
+    padding-top: 5vh;
+    /*reset from mobile: */
+    justify-content: initial;
+    align-items: initial;
+  }
+
+  /*overwrite mobile*/
+  nav * {
+    flex-grow: initial;
+  }
+
+  nav > h1,h2 {
+    flex-direction: column;
+    width: 100%;
+    height: 8vh;
+    padding: 2vw;
+    /*overwrite mobile: */
+    text-align: initial;
+    align-items: initial;
+  }
+
+  .nav {
+    align-items: center;
+    text-align: center;
+  }
+
+  div.main {
+    width: 80vw;
+    min-height:100%;
+    flex-wrap: wrap;
+    padding: 10vh 3.25vw;
+    /*overwrite mobile: */
+    flex-direction: row;
+    margin-top: 0;
+    align-items: initial;
+  }
+
+  div.contact {
+    width: 15vw;
+    height: 15vh;
+    margin: 1vw 4.5vw;
+  }
+}
