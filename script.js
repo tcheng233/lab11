@@ -8,13 +8,15 @@ function cleanUpIndex() {
 }
 
 function createSingleIndex(name) {
-    const CardLink = document.createElement("a")
-    CardLink.href = "page3.html"
-    const Card = document.Element("div")
-    Card.className = "contact"
-    Card.innerHTML = name
-    CardLink.appendChild(Card)
-    return CardLink
+    const cardLink = document.createElement("a")
+    cardLink.href = "page3.html"
+    const cardDiv = document.Element("div")
+    cardDiv.className = "contact"
+    const para = document.Element("p")
+    para.innerHTML = name
+    cardDiv.appendChild(para)
+    cardLink.appendChild(cardDiv)
+    return cardLink
 
 }
 
