@@ -1,3 +1,19 @@
+// Example contact objects
+let contactList = [
+    {
+      name: "Roberta Dobbs",
+      phone: "778-555-1234",
+      address: "101 Main St, Anytown, USA",
+      email: "subgenius@slack.example.com",
+    }, 
+    {
+      name: "Bugs Bunny",
+      phone: "123-867-5309",
+      address: "Warner Brothers Animation Lot",
+      email: "whatsup@doc.example.com",
+    },
+  ]
+
 const main = document.querySelector(".main")
 
 function cleanUpIndex() {
@@ -8,6 +24,7 @@ function cleanUpIndex() {
     
 }
 
+// Please use as createSingleIndex("Tony Cheng")
 function createSingleIndex(name) {
     // Create single card
     const cardLink = document.createElement("a")
@@ -22,6 +39,7 @@ function createSingleIndex(name) {
 
 }
 
+// Please use as renderIndex(contactList)
 function renderIndex (contactList) {
     // Create single card for everyone in the list
     contactList.forEach(person => {
@@ -37,6 +55,7 @@ function cleanUpView () {
     }
 }
 
+// Please use as renderView(contactList[0])
 function renderView (contact) {
     // Create contact info container
     const contactInfo = document.createElement("div")
