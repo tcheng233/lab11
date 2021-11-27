@@ -77,3 +77,9 @@ function renderView (contact) {
     main.appendChild(contactInfo)
 
 }
+
+function cleanUpCreate () {
+    while (main.lastChild) {
+        main.lastChild.remove()
+    }
+}
