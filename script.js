@@ -24,3 +24,9 @@ function renderIndex (contactList) {
         main.appendChild(card)
     })
 }
+
+function cleanUpView () {
+    while (main.lastChild) {
+        main.lastChild.remove()
+    }
+}
