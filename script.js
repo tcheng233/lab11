@@ -1,6 +1,7 @@
 const main = document.querySelector(".main")
 
 function cleanUpIndex() {
+    // Delete every child
     while (main.lastChild) {
         main.lastChild.remove()
     }
@@ -8,6 +9,7 @@ function cleanUpIndex() {
 }
 
 function createSingleIndex(name) {
+    // Create single card
     const cardLink = document.createElement("a")
     cardLink.href = "page3.html"
     const cardDiv = document.createElement("div")
@@ -21,6 +23,7 @@ function createSingleIndex(name) {
 }
 
 function renderIndex (contactList) {
+    // Create single card for everyone in the list
     contactList.forEach(person => {
         const card = createSingleIndex(person.name)
         main.appendChild(card)
@@ -28,18 +31,22 @@ function renderIndex (contactList) {
 }
 
 function cleanUpView () {
+    // Delete every child
     while (main.lastChild) {
         main.lastChild.remove()
     }
 }
 
 function renderView (contact) {
+    // Create contact info container
     const contactInfo = document.createElement("div")
     contactInfo.className = "contactinfo"
 
+    // Create name 
     const contactName = document.createElement("div")
     contactName.className = "contactname"
     contactName.innerHTML = contact.name
+    // Create profile pic
     const profilePic = document.createElement("img")
     profilePic.src = "./img/profile.jpg"
     profilePic.className = "profilepic"
@@ -47,28 +54,34 @@ function renderView (contact) {
     contactName.appendChild(profilePic)
     contactInfo.appendChild(contactName)
 
+    // Create email
     const contactEmail = document.createElement("div")
     contactEmail.className = "contactemail"
     contactEmail.innerHTML = "email: " + contact.email
     contactInfo.appendChild(contactEmail)
     
+    // Create phone
     const contactPhone = document.createElement("div")
     contactPhone.className = "contactphone"
     contactPhone.innerHTML = "cell: " + contact.phone
     contactInfo.appendChild(contactPhone)
 
+    // Create address
     const contactAddress = document.createElement("div")
     contactAddress.className = "contactaddress"
     contactAddress.innerHTML = "address: " + contact.address
     contactInfo.appendChild(contactAddress)
 
+    // Create 2 button, edit and close
     const btn = document.createElement("div")
     btn.className = "buttons"
+    // Edit button
     const editBtn = document.createElement("button")
     editBtn.className = "button edit"
     editBtn.value = "Edit"
     editBtn.innerHTML = "Edit"
     btn.appendChild(editBtn)
+    // Close button
     const closeBtn = document.createElement("button")
     closeBtn.className = "button close"
     closeBtn.value = "Close"
@@ -81,6 +94,7 @@ function renderView (contact) {
 }
 
 function cleanUpCreate () {
+    // Delete every child
     while (main.lastChild) {
         main.lastChild.remove()
     }
@@ -90,6 +104,8 @@ function renderCreate () {
     const contactEdit = document.createElement("div")
     contactEdit.className= "contactedit"
     main.appendChild(contactEdit)
+
+    // Create profile picture
     const contactImgDiv = document.createElement("div")
     contactImgDiv.className= "contactimg"
     contactEdit.appendChild(contactImgDiv)
@@ -99,12 +115,15 @@ function renderCreate () {
     profilePicImg.alt = "Profile picture"
     contactImgDiv.appendChild(profilePicImg)
 
+    // Create form
     const formDiv = document.createElement("div")
     formDiv.className = "form"
     contactEdit.appendChild(formDiv)
     const form = document.createElement("form")
     formDiv.appendChild(form)
 
+    // Create form element
+    // Create input name and add button
     const nameContainer = document.createElement("div")
     nameContainer.className = "inputcontainer"
     form.appendChild(nameContainer)
@@ -121,6 +140,7 @@ function renderCreate () {
     nameBtn.innerHTML = "+"
     nameContainer.appendChild(nameBtn)
 
+    // Create input phone and add button
     const phoneContainer = document.createElement("div")
     phoneContainer.className = "inputcontainer"
     form.appendChild(phoneContainer)
@@ -137,6 +157,7 @@ function renderCreate () {
     phoneBtn.innerHTML = "+"
     phoneContainer.appendChild(phoneBtn)
 
+    // Create input address and add button
     const addressContainer = document.createElement("div")
     addressContainer.className = "inputcontainer"
     form.appendChild(addressContainer)
@@ -153,6 +174,7 @@ function renderCreate () {
     addressBtn.innerHTML = "+"
     addressContainer.appendChild(addressBtn)
 
+    // Create input email and add button
     const emailContainer = document.createElement("div")
     emailContainer.className = "inputcontainer"
     form.appendChild(emailContainer)
@@ -169,9 +191,11 @@ function renderCreate () {
     emailBtn.innerHTML = "+"
     emailContainer.appendChild(emailBtn)
 
+    // Create 2 button, save and cancel
     const btnDiv = document.createElement("div")
     btnDiv.className = "buttons"
     form.appendChild(btnDiv)
+    // save button
     const saveBtn = document.createElement("button")
     saveBtn.type = "submit" 
     saveBtn.className = "button save"
@@ -179,6 +203,7 @@ function renderCreate () {
     saveBtn.name = "savecontact"
     saveBtn.innerHTML = "Save Contact"
     btnDiv.appendChild(saveBtn)
+    // Cancel button
     const cancelBtn = document.createElement("button")
     cancelBtn.type = "reset" 
     cancelBtn.className = "button cancel" 
