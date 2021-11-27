@@ -1,1 +1,8 @@
-/* This file is where all your work should go for Assignment 2.  Please remove this comment. */
+const main = document.querySelector(".main")
+
+function cleanUpIndex() {
+    while (main.lastChild) {
+        main.lastChild.remove()
+    }
+    
+}
