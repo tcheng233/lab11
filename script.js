@@ -135,7 +135,7 @@ function renderCreate () {
     phoneBtn.id="extraphonefield" 
     phoneBtn.name="extraphonefield"
     phoneBtn.innerHTML = "+"
-    phoneContainer.appendChild(phoneInput)
+    phoneContainer.appendChild(phoneBtn)
 
     const addressContainer = document.createElement("div")
     addressContainer.className = "inputcontainer"
