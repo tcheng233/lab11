@@ -85,3 +85,106 @@ function cleanUpCreate () {
         main.lastChild.remove()
     }
 }
+
+function renderCreate () {
+    const contactEdit = document.createElement("div")
+    contactEdit.className= "contactedit"
+    main.appendChild(contactEdit)
+    const contactImgDiv = document.createElement("div")
+    contactImgDiv.className= "contactimg"
+    contactEdit.appendChild(contactImgDiv)
+    const profilePicImg = document.createElement("img")
+    profilePicImg.src = "./img/profile.jpg"
+    profilePicImg.className = "profilepic"
+    profilePicImg.alt = "Profile picture"
+    contactImgDiv.appendChild(profilePicImg)
+
+    const formDiv = document.createElement("div")
+    formDiv.className = "form"
+    contactEdit.appendChild(formDiv)
+    const form = document.createElement("form")
+    formDiv.appendChild(form)
+
+    const nameContainer = document.createElement("div")
+    nameContainer.className = "inputcontainer"
+    form.appendChild(nameContainer)
+    const nameInput = document.createElement("input")
+    nameInput.type="text" 
+    nameInput.id="contactname" 
+    nameInput.name="contactname" 
+    nameInput.placeholder="Contact Name"
+    nameContainer.appendChild(nameInput)
+    const nameBtn = document.createElement("button")
+    nameBtn.className="extrafield" 
+    nameBtn.id="extranamefield" 
+    nameBtn.name="extranamefield"
+    nameBtn.innerHTML = "+"
+    nameContainer.appendChild(nameBtn)
+
+    const phoneContainer = document.createElement("div")
+    phoneContainer.className = "inputcontainer"
+    form.appendChild(phoneContainer)
+    const phoneInput = document.createElement("input")
+    phoneInput.type="tel" 
+    phoneInput.id="contactphone" 
+    phoneInput.name="contactphone" 
+    phoneInput.placeholder="Contact Phone"
+    phoneContainer.appendChild(phoneInput)
+    const phoneBtn = document.createElement("button")
+    phoneBtn.className="extrafield" 
+    phoneBtn.id="extraphonefield" 
+    phoneBtn.name="extraphonefield"
+    phoneBtn.innerHTML = "+"
+    phoneContainer.appendChild(phoneInput)
+
+    const addressContainer = document.createElement("div")
+    addressContainer.className = "inputcontainer"
+    form.appendChild(addressContainer)
+    const addressInput = document.createElement("input")
+    addressInput.type="tel" 
+    addressInput.id="contactaddress" 
+    addressInput.name="contactaddress" 
+    addressInput.placeholder="Contact Address"
+    addressContainer.appendChild(addressInput)
+    const addressBtn = document.createElement("button")
+    addressBtn.className="extrafield" 
+    addressBtn.id="extraaddressfield" 
+    addressBtn.name="extraaddressfield"
+    addressBtn.innerHTML = "+"
+    addressContainer.appendChild(addressBtn)
+
+    const emailContainer = document.createElement("div")
+    emailContainer.className = "inputcontainer"
+    form.appendChild(emailContainer)
+    const emailInput = document.createElement("input")
+    emailInput.type="tel" 
+    emailInput.id="contactemail" 
+    emailInput.name="contactemail" 
+    emailInput.placeholder="Contact Email"
+    emailContainer.appendChild(emailInput)
+    const emailBtn = document.createElement("button")
+    emailBtn.className="extrafield" 
+    emailBtn.id="extraemailfield" 
+    emailBtn.name="extraemailfield"
+    emailBtn.innerHTML = "+"
+    emailContainer.appendChild(emailBtn)
+
+    const btnDiv = document.createElement("div")
+    btnDiv.className = "buttons"
+    form.appendChild(btnDiv)
+    const saveBtn = document.createElement("button")
+    saveBtn.type = "submit" 
+    saveBtn.className = "button save"
+    saveBtn.id = "savecontact" 
+    saveBtn.name = "savecontact"
+    saveBtn.innerHTML = "Save Contact"
+    btnDiv.appendChild(saveBtn)
+    const cancelBtn = document.createElement("button")
+    cancelBtn.type = "reset" 
+    cancelBtn.className = "button cancel" 
+    cancelBtn.id = "cancel" 
+    cancelBtn.name = "cancel"
+    cancelBtn.innerHTML = "Cancel"
+    btnDiv.appendChild(cancelBtn)
+}
+
