@@ -10,9 +10,9 @@ function cleanUpIndex() {
 function createSingleIndex(name) {
     const cardLink = document.createElement("a")
     cardLink.href = "page3.html"
-    const cardDiv = document.Element("div")
+    const cardDiv = document.createElement("div")
     cardDiv.className = "contact"
-    const para = document.Element("p")
+    const para = document.createElement("p")
     para.innerHTML = name
     cardDiv.appendChild(para)
     cardLink.appendChild(cardDiv)
