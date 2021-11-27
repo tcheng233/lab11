@@ -17,3 +17,10 @@ function createSingleIndex(name) {
     return CardLink
 
 }
+
+function renderIndex (contactList) {
+    contactList.forEach(person => {
+        const card = createSingleIndex(person.name)
+        main.appendChild(card)
+    })
+}
