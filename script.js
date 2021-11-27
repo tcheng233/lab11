@@ -25,6 +25,7 @@ function cleanUpIndex() {
 }
 
 // Please use as createSingleIndex("Tony Cheng")
+// or createSingleIndex(contactList[0].name)
 function createSingleIndex(name) {
     // Create single card
     const cardLink = document.createElement("a")
