@@ -113,6 +113,7 @@ function renderView (contact) {
     editBtn.value = "Edit"
     editBtn.innerHTML = "Edit"
     btn.appendChild(editBtn)
+    // Q6
     editBtn.addEventListener("click",(event)=>{
         event.preventDefault()
     })
@@ -252,6 +253,12 @@ function renderCreate () {
     cancelBtn.name = "cancel"
     cancelBtn.innerHTML = "Cancel"
     btnDiv.appendChild(cancelBtn)
+    // Q7
+    cancelBtn.addEventListener("click", (event)=>{
+        cleanUpIndex()
+        renderIndex(contactList)
+        event.preventDefault()
+    })
 }
 
 // Q2
