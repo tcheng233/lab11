@@ -37,6 +37,16 @@ function createSingleIndex(name) {
     para.innerHTML = name
     cardDiv.appendChild(para)
     cardLink.appendChild(cardDiv)
+    cardLink.addEventListener("click",(event)=>{
+        contactList.forEach((person)=>{
+            if (person.name == name){
+                cleanUpIndex()
+                renderView(person)
+                event.preventDefault()
+            }
+
+        })
+    })
     return cardLink
 
 }
