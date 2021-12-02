@@ -245,6 +245,22 @@ function renderCreate () {
     saveBtn.name = "savecontact"
     saveBtn.innerHTML = "Save Contact"
     btnDiv.appendChild(saveBtn)
+    // Q8 and Q9
+    saveBtn.addEventListener("click",(event)=>{
+        event.preventDefault()
+        const newContact = [
+            {
+                name : nameInput.value,
+                email : emailInput.value,
+                phone : phoneInput.value,
+                address : addressInput.value
+            }
+        ]
+        
+    })
+    
+
+
     // Cancel button
     const cancelBtn = document.createElement("button")
     cancelBtn.type = "reset" 
