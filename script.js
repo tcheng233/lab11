@@ -247,7 +247,6 @@ function renderCreate () {
     btnDiv.appendChild(saveBtn)
     // Q8 and Q9
     saveBtn.addEventListener("click",(event)=>{
-        event.preventDefault()
         const newContact = [
             {
                 name : nameInput.value,
@@ -256,7 +255,10 @@ function renderCreate () {
                 address : addressInput.value
             }
         ]
-        
+        contactList.push(newContact)
+        cleanUpCreate()
+        renderView(newContact)
+        event.preventDefault()
     })
     
 
