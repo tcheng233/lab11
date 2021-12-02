@@ -233,3 +233,9 @@ function renderCreate () {
     btnDiv.appendChild(cancelBtn)
 }
 
+const navContact = document.querySelector("#contactshome")
+navContact.addEventListener("click", (event)=>{
+    cleanUpIndex()
+    renderIndex(contactList)
+    event.preventDefault()
+})
