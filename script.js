@@ -255,9 +255,10 @@ function renderCreate () {
                 address : addressInput.value
             }
         ]
-        contactList.push(newContact)
+        contactList.push(newContact[0])
         cleanUpCreate()
-        renderView(newContact)
+        console.log(newContact)
+        renderView(newContact[0])
         event.preventDefault()
     })
     
@@ -294,3 +295,6 @@ navCreate.addEventListener("click", (event)=>{
     renderCreate()
     event.preventDefault()
 })
+
+// Q10
+window.onload = renderIndex(contactList)
