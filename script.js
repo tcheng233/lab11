@@ -113,6 +113,9 @@ function renderView (contact) {
     editBtn.value = "Edit"
     editBtn.innerHTML = "Edit"
     btn.appendChild(editBtn)
+    editBtn.addEventListener("click",(event)=>{
+        event.preventDefault()
+    })
     // Close button
     const closeBtn = document.createElement("button")
     closeBtn.className = "button close"
