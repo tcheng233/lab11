@@ -1,4 +1,5 @@
 // Example contact objects
+// Q1
 let contactList = [
     {
       name: "Roberta Dobbs",
@@ -233,9 +234,18 @@ function renderCreate () {
     btnDiv.appendChild(cancelBtn)
 }
 
+// Q2
 const navContact = document.querySelector("#contactshome")
 navContact.addEventListener("click", (event)=>{
     cleanUpIndex()
     renderIndex(contactList)
+    event.preventDefault()
+})
+
+// Q3
+const navCreate = document.querySelector("#newcontact")
+navCreate.addEventListener("click", (event)=>{
+    cleanUpIndex()
+    renderCreate()
     event.preventDefault()
 })
